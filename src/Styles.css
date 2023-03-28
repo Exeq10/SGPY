@@ -1,4 +1,17 @@
 
+
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+
+
+h1{
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #1f2750
+}
+.logo{
+  width: 150px;
+}
+
 .Pendiente{
 
     color: red;

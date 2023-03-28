@@ -83,9 +83,9 @@ function CreatePedido() {
 
 
   return (
-    <div className="container w-50  mt-5 text-center">
+    <div className="container w-50  mt-3 text-center">
 
-<h1 className="mb-5 "  >SGPY- Crear Nuevo Pedido </h1>
+<h1 className="mb-5 "  > Crear Nuevo Pedido </h1>
 
 
       <form onSubmit={store}>

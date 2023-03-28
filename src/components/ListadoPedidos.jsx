@@ -132,7 +132,7 @@ useEffect(() => {
     <div className="container text-center  ">
 
 
-      <h1 className="mb-5 mt-4 ">SGPY- Listado de Pedidos</h1>
+      <h1 className="mb-5 mt-4 "> Listado de Pedidos</h1>
 
      <Filtro setFiltroEstado={setFiltroEstado} />
           

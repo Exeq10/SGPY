@@ -58,12 +58,12 @@ function AddProveedor() {
 
   return (
     <div className="container w-50  mt-5 text-center">
-      <h1 className="mb-5 ">SGPY-Añadir Proveedor</h1>
+      <h1 className="mb-5 ">Añadir Proveedor</h1>
 
       <form onSubmit={store}>
         {/* input de nombre del proveedor  */}
         <div className="form-group">
-          <label htmlFor="nombre">Pedido</label>
+          <label htmlFor="nombre">Proveedor</label>
           <input
             onChange={(e) => {
               setNombre(e.target.value);

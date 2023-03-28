@@ -21,9 +21,9 @@ function App() {
   return (
     <div>
 
-    <header className='container  p-3  header  d-flex justify-content-center' >
+    <header className='container  p-1  header  d-flex justify-content-center' >
 
-    <img  className='w-25'  src="/logo.svg" alt="" />
+    <img  className=' w-25'  src="/SGP.svg" alt="" />
 
     </header>
 

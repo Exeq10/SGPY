@@ -3,6 +3,7 @@ import { useParams, Navigate, useNavigate,Link } from "react-router-dom";
 import { updateDoc, getDoc, doc } from "firebase/firestore";
 import { db } from "../firebaseConfig/Firebase";
 import { async } from "@firebase/util";
+import Selectprov from "./compProveedores/Selectprov";
 
 function EditPedido() {
   /* uso estados para cada valor que voy a tomar del form  */
@@ -12,6 +13,8 @@ function EditPedido() {
   const [fecha, setFecha] = useState("");
   const [estado, setEstado] = useState("");
   const [proveedor, setProveedor] = useState("");
+  const [obs,setObs]= useState('')
+
 
   const navegacion = useNavigate();
   const { id } = useParams();
@@ -45,6 +48,8 @@ function EditPedido() {
       setFecha(pedido.data().fecha)
       setEstado(pedido.data().estado)
       setProveedor(pedido.data().proveedor)
+      setObs(pedido.data().obs)
+      
 
 
     } else {
@@ -57,9 +62,9 @@ function EditPedido() {
   }, []);
 
   return (
-  <div className="container w-50  mt-5 text-center">
+  <div className="container w-50  mt-3 text-center">
 
-  <h1 className="mb-5 "  >SGPY- Modificar Pedido </h1>
+  <h1 className="mb-5 "  > Modificar Pedido </h1>
   
   
         <form onSubmit={update}>
@@ -124,11 +129,9 @@ function EditPedido() {
                 setProveedor(e.target.value);
               }}
               className="custom-select my-1 mr-sm-2 mt-5"
-            >
+            ><option value="Proveedor">Proveedor</option>
             
-              <option value={"Asatul"}>Asatul</option>
-              <option value={"Tomacon"}>Tomacon</option>
-              <option value={"Sudel"}>Sudel</option>
+             <Selectprov/>
             </select>
   {/* Select de estado */}
             <label htmlFor="estado" className="m-2">
@@ -147,6 +150,14 @@ function EditPedido() {
             <option className="Entregado"  value={"Entregado"}>Entregado </option>
             </select>
           </div>
+
+          {/* textarea para mensaje Opcional  */}
+
+   <label htmlFor="observaciones" className="m-2">
+            Actualizaciones{" "}
+          </label>
+   <textarea onChange={(e)=> {setObs(e.target.value)}} className="form-control" rows={3} defaultValue={""} id={'observaciones'} />     
+
   
   {/* input de tipo submit  */}
           <input

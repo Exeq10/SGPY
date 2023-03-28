@@ -66,7 +66,7 @@ function ShowCompletePedido() {
     <div className='container '  > 
 
       <div className="card" id='ordenpng'>
-        <div className="card-header ">
+        <div className="card-header bg-white ">
          <div className="card" style={{width: '15rem'}}>
            <img className="card-img-center" src="/logo.svg" alt="profile" />
           
@@ -83,6 +83,7 @@ function ShowCompletePedido() {
 
             <h4 className='col mt-3 text-center'> {fecha} </h4>
             <h4 className='col mt-3 text-center'>Solicitado por <span className='text-danger  text-capitalize' >{solicitante}</span>  </h4>
+            <h4 className='col mt-3 text-center'>Proveedor <span className='text-danger  text-capitalize' >{proveedor}</span>  </h4>
 
 
              
